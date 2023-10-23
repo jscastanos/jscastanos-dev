@@ -18,7 +18,7 @@ export default function DarkMode({ theme, setTheme }: Props) {
   }
 
   return (
-    <button className='text-2xl' onClick={handleMode}>
+    <button className='text-2xl h-8 w-8 outline-0' onClick={handleMode}>
       {theme === 'dark' && <FontAwesomeIcon icon={faMoon} />}
       {theme === 'light' && <FontAwesomeIcon icon={faSun} />}
     </button>

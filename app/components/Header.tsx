@@ -12,7 +12,7 @@ export default function Header() {
   const { theme, toggleTheme } = context;
 
   return (
-    <header className='h-16 flex justify-end'>
+    <header className='h-16 flex justify-end items-center'>
       <DarkMode theme={theme} setTheme={toggleTheme} />
     </header>
   );
