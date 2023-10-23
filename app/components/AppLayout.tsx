@@ -23,6 +23,8 @@ export default function AppLayout({ children }: Props) {
 
     if (localTheme !== null) {
       setTheme(localTheme);
+    } else {
+      setTheme('dark');
     }
   }, []);
 
