@@ -2,6 +2,7 @@
 
 import classNames from 'classnames';
 import { createContext, useEffect, useState } from 'react';
+import Footer from './Footer';
 import Header from './Header';
 
 interface Props {
@@ -40,6 +41,7 @@ export default function AppLayout({ children }: Props) {
         <div className='h-full w-[90%] mx-auto flex flex-col'>
           <Header />
           {children}
+          <Footer />
         </div>
       </main>
     </ThemeContext.Provider>
