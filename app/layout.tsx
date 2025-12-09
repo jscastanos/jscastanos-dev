@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import AppLayout from "./components/AppLayout";
-import "./fontawesome";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Jec Castanos - Frontend Engineer",
+	title: "Jec Castanos - Fullstack Developer",
 	description:
-		"Hi, I’m Jec Castanos. I am a frontend engineer from the Philippines with over 5 years of experience in web and software development. I am passionate about building user-friendly and visually appealing web applications. I am also an expert in performance optimization and code quality. In my spare time, I enjoy learning new technologies, playing video games, and spending time with my family and friends. I am always looking for new opportunities to challenge myself and grow as an engineer. If you are looking for a frontend engineer with a proven track record of success, I would love to hear from you.",
+		"Hi, I’m Jec Castanos. I am a fullstack developer from the Philippines with over 5 years of experience in web and software development. I am passionate about building user-friendly and visually appealing web applications. I am also an expert in performance optimization and code quality. In my spare time, I enjoy learning new technologies, playing video games, and spending time with my family and friends. I am always looking for new opportunities to challenge myself and grow as an developer. If you are looking for a fullstack developer with a proven track record of success, I would love to hear from you.",
 	authors: [
 		{
 			url: "https://github.com/jscastanos",
