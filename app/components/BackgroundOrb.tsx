@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function BackgroundOrb({ theme }: Props) {
+	const gradientPrefix = theme === "light" ? "sun" : "moon";
+
 	return (
 		<div className="absolute inset-0 overflow-hidden pointer-events-none">
 			<svg
@@ -17,6 +19,7 @@ export default function BackgroundOrb({ theme }: Props) {
 				viewBox="0 0 100 100"
 				preserveAspectRatio="none"
 				aria-hidden="true"
+				style={{ willChange: "transform" }}
 			>
 				<title>Decorative background stars</title>
 				<defs>
@@ -54,59 +57,30 @@ export default function BackgroundOrb({ theme }: Props) {
 						<stop offset="100%" stopColor="#0284c7" stopOpacity="0" />
 					</radialGradient>
 
-					{/* Blur filter */}
+					{/* Reduced blur filter for better performance */}
 					<filter id="blur">
-						<feGaussianBlur in="SourceGraphic" stdDeviation="30" />
+						<feGaussianBlur in="SourceGraphic" stdDeviation="15" />
 					</filter>
 				</defs>
 
-				{/* Light theme stars */}
-				<g
-					className="transition-opacity duration-500"
-					opacity={theme === "light" ? 1 : 0}
-				>
-					{stars.map((star) => (
-						<g key={`light-${star.id}`} transform-origin="center">
-							<animateTransform
-								attributeName="transform"
-								type="rotate"
-								from={`${star.startAngle}`}
-								to={`${star.startAngle + 360}`}
-								dur={`${star.duration}s`}
-								repeatCount="indefinite"
-							/>
-							<path
-								d={createStarPath(star.cx, star.cy, star.size)}
-								fill={`url(#sunGradient${star.gradient})`}
-								filter="url(#blur)"
-							/>
-						</g>
-					))}
-				</g>
-
-				{/* Dark theme stars */}
-				<g
-					className="transition-opacity duration-500"
-					opacity={theme === "dark" ? 1 : 0}
-				>
-					{stars.map((star) => (
-						<g key={`dark-${star.id}`} transform-origin="center">
-							<animateTransform
-								attributeName="transform"
-								type="rotate"
-								from={`${star.startAngle}`}
-								to={`${star.startAngle + 360}`}
-								dur={`${star.duration}s`}
-								repeatCount="indefinite"
-							/>
-							<path
-								d={createStarPath(star.cx, star.cy, star.size)}
-								fill={`url(#moonGradient${star.gradient})`}
-								filter="url(#blur)"
-							/>
-						</g>
-					))}
-				</g>
+				{/* Only render stars for current theme */}
+				{stars.map((star) => (
+					<g key={star.id} transform-origin="center" style={{ willChange: "transform" }}>
+						<animateTransform
+							attributeName="transform"
+							type="rotate"
+							from={`${star.startAngle}`}
+							to={`${star.startAngle + 360}`}
+							dur={`${star.duration}s`}
+							repeatCount="indefinite"
+						/>
+						<path
+							d={createStarPath(star.cx, star.cy, star.size)}
+							fill={`url(#${gradientPrefix}Gradient${star.gradient})`}
+							filter="url(#blur)"
+						/>
+					</g>
+				))}
 			</svg>
 		</div>
 	);

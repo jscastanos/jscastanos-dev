@@ -1,6 +1,6 @@
 <svg id="euXio6FE2UI1"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="640" height="640" style="background-color:#c1c1ef">
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="640" height="640">
   <style><![CDATA[#euXio6FE2UI21 {animation: euXio6FE2UI21_c_o 1000ms linear infinite normal forwards}@keyframes euXio6FE2UI21_c_o { 0% {opacity: 0} 28% {opacity: 1} 100% {opacity: 1}} #euXio6FE2UI22 {animation: euXio6FE2UI22_c_o 1000ms linear infinite normal forwards}@keyframes euXio6FE2UI22_c_o { 0% {opacity: 0} 34% {opacity: 0} 69% {opacity: 1} 100% {opacity: 1}} #euXio6FE2UI23 {animation: euXio6FE2UI23_c_o 1000ms linear infinite normal forwards}@keyframes euXio6FE2UI23_c_o { 0% {opacity: 0} 76% {opacity: 0} 99% {opacity: 1} 100% {opacity: 1}}]]></style>
   <defs>
     <linearGradient id="euXio6FE2UI3-fill" x1="0.205284" y1="-0.273163" x2="0.550399" y2="1.124969" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
@@ -61,5 +61,4 @@
   <path id="euXio6FE2UI21" d="M501.746802,156.065004l15.055376-1.67282-5.854868,13.382556l11.760843-2.622981" transform="translate(-17.139849 45.706268)" opacity="0" fill="none" stroke="#3f5787" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <path id="euXio6FE2UI22" d="M517.665003,125.870673l23.927796-5.383754-7.776533,26.91877l27.516965-7.178339" transform="translate(-17.13985 45.706268)" opacity="0" fill="none" stroke="#3f5787" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="8"/>
   <path id="euXio6FE2UI23" d="M542.789189,91.773563l36.489889-7.776534-5.383755,40.079059l38.882669-13.758484" transform="translate(-17.139848 45.70627)" opacity="0" fill="none" stroke="#3f5787" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <ellipse rx="117.348203" ry="110.690148" transform="translate(300.757293 9.582305)" fill="#d2eded" stroke-width="0"/>
 </svg>

@@ -1,6 +1,6 @@
 <svg id="eBDFLjkmS0P1"
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="640" height="640" style="background-color:#f6d6ad">
+  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 640" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="640" height="640">
   <style><![CDATA[#euXio6FE2UI21 {animation: euXio6FE2UI21_c_o 800ms linear infinite normal forwards}@keyframes euXio6FE2UI21_c_o { from { stroke-dashoffset: 42.6}, to { stroke-dashoffset: 0 }} #euXio6FE2UI22 {animation: euXio6FE2UI22_c_o 800ms linear infinite normal forwards}@keyframes euXio6FE2UI22_c_o { from { stroke-dashoffset: 42.6}, to { stroke-dashoffset: 0 }} #euXio6FE2UI23 {animation: euXio6FE2UI23_c_o 800ms linear infinite normal forwards}@keyframes euXio6FE2UI23_c_o { from { stroke-dashoffset: 42.6}, to { stroke-dashoffset: 0 }}]]></style>
   <defs>
     <linearGradient id="eBDFLjkmS0P4-fill" x1="0.205284" y1="-0.273163" x2="0.550399" y2="1.124969" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
@@ -37,7 +37,6 @@
     </linearGradient>
   </defs>
   <g transform="translate(-50.981675 126.173581)">
-    <ellipse rx="117.348203" ry="110.690148" transform="matrix(1.541914 0 0 1.534401 675.017659-120.291387)" fill="#ffbe61" stroke-width="0"/>
     <path d="M-289.230631,17.691864c0-41.934585,146.72516-79.925563,282.736679-79.925563c71.165785,0,79.280268,33.8122,112.894858,48.954408c30.629365,13.797468,91.32542,22.931798,91.32542,42.924803c0,41.934586-104.175262,47.990525-240.186781,47.990525s-246.770176-18.009587-246.770176-59.944173Z" transform="matrix(.941988 0 0-1 408.651894 430.249953)" fill="url(#eBDFLjkmS0P4-fill)" stroke-width="0"/>
     <path d="M354.767411,287.339369c18.520077,13.644275,64.300979,44.149314,49.978488,75.523048-13.835487,30.30694-59.359521,46.06368-136.699225,19.517968-2.722331-.9344-5.484082-1.921213-8.285259-2.96165-82.38084-30.598598-146.502758-67.243024-162.606937-92.232268c139.939766,2.221266,179.402161-42.972731,257.612933.152902Z" transform="matrix(-.386103-.845838 1.273433-.581288-119.352835 656.285276)" fill="url(#eBDFLjkmS0P5-fill)" stroke-width="1.28"/>
     <path d="M161.093907,182.794232L153.198115,45.933837q23.316445,18.847095,36.901499,23.233646c13.585054,4.386551,38.167828,10.966378,123.700742,22.371411q123.700741-11.843688,142.124256-19.73948t32.844661-20.60172q-11.789216,141.670531-11.789216,146.934392t-315.88615-15.337854Z" transform="translate(39.478964-86.853707)" fill="url(#eBDFLjkmS0P6-fill)" stroke-width="1.28"/>

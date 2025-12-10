@@ -52,7 +52,7 @@ export default function Home() {
 					className={classNames(
 						"absolute left-1/2 -translate-x-1/2 transition-all duration-500 z-10",
 						{
-							"opacity-100 -top-16": showGreeting,
+							"opacity-100 -top-8": showGreeting,
 							"opacity-0 -top-12 pointer-events-none": !showGreeting,
 						},
 					)}
@@ -64,7 +64,7 @@ export default function Home() {
 						})}
 					>
 						<p className="text-lg sm:text-xl font-medium whitespace-nowrap">
-							{theme === "light" ? "Good Morning" : "Good Night!"}
+							{theme === "light" ? "Good Morning" : "Good Night"}
 						</p>
 						{/* Speech bubble pointer */}
 						<div
