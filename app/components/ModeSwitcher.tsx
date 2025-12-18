@@ -11,9 +11,6 @@ interface Props {
 export default function ModeSwitcher({ theme, setTheme }: Props) {
 	function handleMode() {
 		const nextTheme = theme === "dark" ? "light" : "dark";
-
-		// set mode to local storage
-		localStorage.setItem("theme", nextTheme);
 		setTheme(nextTheme);
 	}
 

@@ -1,15 +1,33 @@
 "use client";
 import classNames from "classnames";
 import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "./components/AppLayout";
+import { useEffect, useState } from "react";
+import { useThemeStore } from "./store/themeStore";
 
 export default function Home() {
-	const context = useContext(ThemeContext);
+	const theme = useThemeStore((state) => state.theme);
 	const [imagesLoaded, setImagesLoaded] = useState(false);
 	const [showGreeting, setShowGreeting] = useState(true);
 
-	const theme = context?.theme;
+	const getGreeting = () => {
+		const hour = new Date().getHours();
+
+		// Determine what the theme should be based on time
+		const expectedTheme = hour >= 5 && hour < 12 ? "light" : "dark";
+
+		// If theme matches the expected time-based theme, use time-based greeting
+		if (theme === expectedTheme) {
+			if (hour >= 5 && hour < 12) return "Good Morning";
+			if (hour >= 12 && hour < 17) return "Good Afternoon";
+			if (hour >= 17 && hour < 21) return "Good Evening";
+			if ((hour >= 21 && hour <= 23) || hour === 0) return "Good Night";
+			// For hours 1-4 AM with dark theme
+			return "ZzzZzz";
+		}
+
+		// If theme doesn't match time, use default greetings
+		return theme === "light" ? "Good Morning" : "Good Evening";
+	};
 
 	useEffect(() => {
 		// Preload both images
@@ -42,7 +60,7 @@ export default function Home() {
 		}
 	}, [theme]);
 
-	if (context === null) return null;
+	if (theme === null) return null;
 
 	return (
 		<div className="flex justify-center items-center flex-1 flex-col md:flex-row space-y-4 md:space-x-4">
@@ -64,7 +82,7 @@ export default function Home() {
 						})}
 					>
 						<p className="text-lg sm:text-xl font-medium whitespace-nowrap">
-							{theme === "light" ? "Good Morning" : "Good Night"}
+							{getGreeting()}
 						</p>
 						{/* Speech bubble pointer */}
 						<div
