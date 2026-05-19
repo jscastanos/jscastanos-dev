@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				let theme;
+				let hour;
+				try {
+					const stored = localStorage.getItem("theme-storage");
+					if (stored) {
+						const parsed = JSON.parse(stored);
+						theme =
+							(parsed?.state?.theme) ||
+							(parsed?.theme);
+					}
+				} catch (_e) {
+					// fall through to time-based default
+				}
+				if (theme !== "light" && theme !== "dark") {
+					hour = new Date().getHours();
+					theme = hour >= 5 && hour < 12 ? "light" : "dark";
+				}
+				document.documentElement.dataset.theme = theme;
+				if (theme === "dark") {
+					document.documentElement.classList.add("dark");
+				}
+			})();
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
