@@ -8,12 +8,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
+# sveltekit
+/.svelte-kit/
+/build/
 
 # misc
 .DS_Store
@@ -26,10 +23,14 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# editor
+.vscode/*
+!.vscode/extensions.json
